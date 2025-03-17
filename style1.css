@@ -1,0 +1,311 @@
+
+*, html{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-image: url(img/1.png);
+    background-size: cover;
+}
+
+/* navigasi */
+nav {
+    display: flex;
+    background-color: rgb(50, 162, 93);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: rgb(216, 245, 235);
+}
+
+nav .logo {
+    font-family: "Chelsea Market", serif;
+    letter-spacing: 3px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(216, 245, 235);
+    font-family: "Work Sans", serif;
+}
+
+nav ul li a:hover {
+    color: antiquewhite ;
+}
+
+/* toggle */
+.toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(216, 245, 235);
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+/* landing page */
+    .landing-page{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 40px;
+        flex-wrap: wrap;
+        /* box-shadow: 0px 0px 20px -10px;
+        border-radius: 10px; */
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .gambar{
+        width: 800px;
+        margin-top: 20px;
+    }
+
+    .gambar img{
+        width: 100%;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+        
+    }
+
+    .gambar h3{
+        margin-top: 10px;
+        font-family: "Sacramento", serif;
+        text-align: justify;
+        font-size: 4rem ;
+        color: rgb(50, 162, 93);
+        text-shadow: 0 1.5px 1.5px rgba(0, 0, 0, 0.5);
+    }
+
+    .gambar p{
+        margin-top: 20px;
+        font-family:"Work Sans", serif;
+        text-align: justify;
+        font-weight: bold;
+        
+    }
+    hr {
+        width: 100%;
+        margin: auto;
+        border: solid 5px rgb(50, 162, 93);
+        border-radius: 10px;
+        margin-top: 5px;
+        animation: hr 2s infinite alternate;
+    }
+
+    @keyframes hr {
+        0% {
+            width: 10px;
+        }
+        50% {
+            width: 50px;
+        }
+        100%{
+            width: 200px;
+        }
+    }
+
+
+    /* jadwal */
+
+    .hero{
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+      
+    }
+
+   
+
+    .hero .informasi{
+        
+        font-family: "Combo", serif;
+        color: rgb(50, 162, 93);
+        border-radius: 10px;
+        font-size: 3rem;
+        text-shadow: 0 1.5px 1.5px rgba(0, 0, 0, 0.5);
+    }
+    .hero .alamat {
+        font-family: "Work", serif;
+        font-size: 1.5rem;
+    }
+
+    .hero .description{
+        font-weight: 300;
+    }
+
+    .countdown {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.25rem;
+        font-family: 'Work Sans', serif;
+    }
+    
+    .countdown div{
+      width: 100px;
+      height: 65px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: left;
+      margin: 10px;
+      background: var(--pink);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+      border-radius: 20rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      
+        
+    }
+    
+    
+    .countdown div h2{
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        align-items: center;
+        
+    }
+    
+    .countdown div small {
+        font-size: 0.6rem;
+        font-weight: 500;
+        color: wit;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .hero a{
+        color: rgb(4, 89, 37);
+        background-color: white;
+        text-decoration: none;
+        border-radius: solid 5px;
+    }
+    
+    .hero a:hover{
+        background-color: rgb(4, 89, 37);
+        color: white;
+    
+    }
+
+    /* silsilah */
+    
+    /* galeri */
+
+    .carousel{
+        margin-top: 20px;
+    }
+
+
+/* responsive breakpoint */
+
+/* ukuran tablet */
+@media screen and (max-width: 768px){
+    nav ul {
+        width: 50% }
+
+    
+    }
+
+
+@media screen and (max-width: 576px){
+    nav ul{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(50, 162, 93);
+        z-index: 2;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .toggle {
+        display: flex;
+        z-index: 3;
+    }
+
+    .countdown div {
+        padding: 5px;
+        width: 54px;
+        margin: 3px;
+    }
+    .countdown div small {
+        font-size: 7px;
+
+    }
+
+    .gambar h3{
+        font-size: 30px;
+    }
+
+    .landing-page{
+        padding-bottom: 20px;
+    }
+}
+
+
+
+/* toggle animation */
+.toggle span:nth-child(2){
+    transform-origin: 0 0; 
+}
+
+.toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.toggle input:checked ~ span:nth-child(2){
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.toggle input:checked ~ span:nth-child(4){
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0);
+}
