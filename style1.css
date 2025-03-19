@@ -1,0 +1,605 @@
+:root {
+    --primary : #84d472;
+    --bg : #0f4110;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:"Poppins", serif;
+    background-color: var(--bg);
+    color: #080000;
+    background-image: url(1.png);
+    
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #547d42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+
+.navbar .logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .logo span{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a{
+    color: white;
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--primary);
+
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.5s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color: white;
+    margin: 0 0.1rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: var(--primary);
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/* section */
+
+.hero{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(WhatsApp\ Image\ 2025-03-16\ at\ 14.08.42_b1706359.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgb(251, 255, 251) 3%, rgba(255,255,255,0)25%);
+}
+
+.hero .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 5em;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p {
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    margin-top: 0.5rem;
+    font-weight: 200;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* mix-blend-mode: difference; */
+}
+
+.hero .content .cta{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* about */
+.about{
+    padding: 6rem 7% 1.4rem;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.about h2 span{
+    color: var(--primary);
+}
+
+.about .row {
+    display: flex;
+
+}
+
+.about .row .about-img{
+    flex: 1 1 35rem;
+    
+}
+
+.about .row .about-img img{
+    width: 100%;
+}
+
+.about .row .conten-tentangkami{
+    flex: 1 1 25rem;
+    padding: 0 1rem;
+}
+
+
+.about .row .conten-tentangkami p{
+    margin-bottom:  0.8rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.about .silsilah{
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about .silsilah h3{
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.about .silsilah span {
+    color: var(--primary);
+}
+
+
+
+/* jadwal*/
+.jadwal{
+    padding: 6rem 7% 1.4rem;
+    justify-content: center;
+    text-align: center;
+}
+.jadwal h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.jadwal h2 span{
+    color: var(--primary);
+}
+
+.jadwal p{
+    font-family: "Work", serif;
+    text-align: center;
+    /* text-align: justify; */
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.jadwal .description {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+.jadwal button {
+    margin-top: 30px;
+}
+
+
+.jadwal button a{
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #84d472;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.jadwal button a:hover{
+    background-color:white;
+     color: #84d472;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+    font-family: 'Work Sans', serif;
+}
+
+.countdown div{
+    width: 100px;
+    height: 65px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    margin: 10px;
+    background: var(--pink);
+    border: 1px solid rgba(51, 65, 85, 0.6);
+    border-radius: 20rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+      
+  }
+  
+  
+  .countdown div h2{
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      align-items: center;
+      
+  }
+  
+  .countdown div small {
+      font-size: 0.6rem;
+      font-weight: 500;
+      color: wit;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+  }
+
+/* galeri */
+.galeri{
+    padding: 6rem 7% 1.4rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.galeri h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.galeri h2 span{
+    color: var(--primary);
+}
+
+
+.galeri p{
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.galeri .gambar{
+    justify-content: center;
+    text-align: center;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.galeri .gambar .mySlides{
+    display: none;
+}
+
+.galeri .gambar .mySlides .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.galeri .gambar .mySlides .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.galeri .gambar .mySlides .prev:hover, .next:hover {
+    background-color: #84d472;
+}
+
+.galeri .gambar .mySlides .text{
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.galeri .gambar .mySlides .textt{
+    color: var(--bg);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.galeri .gambar .mySlides .numbertext{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: difference;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{
+    background-color: #f2f2f2;
+}
+
+.galeri .gambar .mySlides .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+.galeri .gambar img{
+    
+    width: 600px;
+    height: 400px;
+    
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer .socials a{
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .socials a:hover, footer .links a:hover {
+    color: var(--bg);
+}
+
+footer .links {
+    margin-bottom: 1.2rem;
+}
+
+footer .links a{
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit a{
+    color: var(--bg);
+    font-weight: 700;
+}
+
+footer .credit a:hover{
+    color: var(--primary);
+    background-color: var(--bg);
+}
+
+/* responsive */
+
+/* laptop */
+@media (max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+.about .silsilah img{
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* tablet */
+@media (max-width: 758px){
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: white;
+        width: 30rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        margin: 1.5rem;
+        padding: 2rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2);
+    }
+
+
+    .about .row .about-img img{
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .silsilah img{
+        height: 20rem;
+        object-fit: cover;
+        object-position: center;
+        padding: 5px;
+    }
+
+    .about .row .conten-tentangkami{
+        padding: 0;
+    }
+
+    .about .row .conten-tentangkami h3{
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    .about .row .conten-tentangkami p{
+        font-size: 1.6rem;
+    }
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .menu p, .contact p{
+        font-size: 1.2rem;
+    }
+
+    .contact .row{
+        flex-wrap: wrap;
+    }
+
+    .contact .row .map{
+        height: 30rem;
+    }
+
+    .contact .row form{
+        padding-top: 0;
+    }
+
+    .countdown div {
+        padding: 5px;
+        width: 54px;
+        margin: 3px;
+    }
+    .countdown div small {
+        font-size: 7px;
+
+    }
+
+    .galeri .gambar .mySlides img{
+        width: 100%;
+        height: 200px;
+    }
+    
+   
+}
+
+
+    /* mobile */
+    @media (max-width: 450px){
+        html {
+            font-size: 45%;
+        }
+    }
