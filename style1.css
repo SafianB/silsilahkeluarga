@@ -344,6 +344,7 @@ body{
     max-width: 1000px;
     position: relative;
     margin: auto;
+    margin-top: 20px; 
 }
 
 .galeri .gambar .mySlides{
